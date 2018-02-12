@@ -18,7 +18,8 @@ int main(){
 
 void print(char* c){
 	if(*c){//anteponer un * estamos desreferenciando pero solo a apuntadores 
+		//putchar(*c);
+		print(c+1);//imprime alreves
 		putchar(*c);
-		print(c+1);
 	}
 }
