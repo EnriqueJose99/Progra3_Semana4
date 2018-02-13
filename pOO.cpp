@@ -1,5 +1,5 @@
 #include "MiClase.h"
-
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -30,6 +30,6 @@ void MiClase::setNombre(string pNombre){
 
 
 /*destructor*/
-~MiClase::~MiClase(){
+MiClase::~MiClase(){
 	cout<<"La instancia fue eliminada"<<endl;
 }
