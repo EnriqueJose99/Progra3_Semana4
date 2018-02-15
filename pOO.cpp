@@ -4,8 +4,8 @@
 using namespace std;
 
 MiClase::MiClase(string pNombre, int pCodigo){
-	nombre = pNombre;
-	codigo = pCodigo;  
+	this->nombre = pNombre;
+	this->codigo = pCodigo;  
 }
 
 MiClase::MiClase(){

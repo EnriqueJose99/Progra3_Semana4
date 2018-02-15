@@ -15,7 +15,7 @@ class MiClase{
 		MiClase(string, int);
 		//constructor por defecto
 		MiClase();
-		//mutadores
+		//getters and setters
 		int getCodigo();
 		void setCodigo(int);
 		string getNombre();
