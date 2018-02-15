@@ -36,12 +36,19 @@ void runDynamicCast(){
 	MiClase* miClase = new Alumno();
 	Alumno* alumno = NULL;
 	MiClase miClase2("Juan", 11641068);
+	
 	cout<<"1 El tipo de dato es: "<<typeid(miClase).name()<<endl;
 	cout<<"2 EL tipo de dato es: "<<typeid(miClase2).name()<<endl;
 	cout<<"3 El tipo de dato es: "<<typeid(alumno).name()<<endl;
+	
 	if(typeid(miClase) == typeid(MiClase*)){
-		cout<<"Es un apuntador"<<endl;
+		cout<<"Es un apuntador a MiClase "<<endl;
 	}
+
+	if(typeid(*miClase)==typeid(Alumno)){
+		cout<<"Es un apuntador a Alumno"<<endl;
+	}
+
 	//Dynamic Cast
 	alumno = dynamic_cast<Alumno*>(miClase);
 	if(alumno!= NULL){

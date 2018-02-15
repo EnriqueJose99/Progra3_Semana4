@@ -21,15 +21,15 @@ void MiClase::setCodigo(int pCodigo){
 }
 
 string MiClase::getNombre(){
-	return nombre;
+return nombre;
 }
 
 void MiClase::setNombre(string pNombre){
-	nombre = pNombre;
+nombre = pNombre;
 }
 
 
 /*destructor*/
 MiClase::~MiClase(){
-	cout<<"La instancia fue eliminada"<<endl;
+cout<<"La instancia fue eliminada"<<endl;
 }
