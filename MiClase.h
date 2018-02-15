@@ -16,7 +16,7 @@ class MiClase{
 		//constructor por defecto
 		MiClase();
 		//getters and setters
-		int getCodigo();
+		virtual int getCodigo();/*Virtual intro. a polimorfismo*/
 		void setCodigo(int);
 		string getNombre();
 		void setNombre(string);

@@ -1,6 +1,9 @@
 #include "MiClase.h"
 #include "Alumno.h"
 #include <iostream>
+#include <typeinfo>
+
+
 
 using namespace std;
 //metodo prueba de clases
@@ -15,23 +18,51 @@ void runAlumno();
 
 
 int main(){
+	
 	//runClase();
+	
 	//runC();
-	runAlumno();
+	
+	//runAlumno();
+
+	runDynamicCast();
+	
+	
+
 	return 0;
+
 }
 void runDynamicCast(){
 	MiClase* miClase = new Alumno();
 	Alumno* alumno = NULL;
+	MiClase miClase2("Juan", 11641068);
+	cout<<"1 El tipo de dato es: "<<typeid(miClase).name()<<endl;
+	cout<<"2 EL tipo de dato es: "<<typeid(miClase2).name()<<endl;
+	cout<<"3 El tipo de dato es: "<<typeid(alumno).name()<<endl;
+	if(typeid(miClase) == typeid(MiClase*)){
+		cout<<"Es un apuntador"<<endl;
+	}
+	//Dynamic Cast
+	alumno = dynamic_cast<Alumno*>(miClase);
+	if(alumno!= NULL){
+		cout<<"La carrera es " <<alumno->getCarrera()<<endl;
+	}
+	
+	miClase->setNombre("Enrique Galeano");
+
+	cout<<"El nombre es: " <<alumno->getNombre()<<endl;
+	delete miClase;
+	
+
 }
 
 void runAlumno(){
-	Alumno* alv = new Alumno("Enrique", 11641068, "Sistemas");
-	cout<<"El nombre del Alumno es: "<< alv-> getNombre()<<endl;
-	cout<<"La cuenta del Alumno es: "<< alv-> getCodigo()<<endl;
-	cout<<"La carrera del Alumno es: "<<alv->getCarrera()<<endl;
+	Alumno* a = new Alumno("Enrique", 11641068, "Sistemas");
+	cout<<"El nombre del Alumno es: "<< a-> getNombre()<<endl;
+	cout<<"La cuenta del Alumno es: "<< a-> getCodigo()<<endl;
+	cout<<"La carrera del Alumno es: "<<a->getCarrera()<<endl;
 
-	delete alv;
+	delete a;
 
 }
 void runC(){
